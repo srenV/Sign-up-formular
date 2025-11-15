@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: #2d2f48;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  height: 100dvh;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  top: -1em;
+}
+
+/* Main Frame */
+.newsletter-card {
+  display: flex;
+  gap: 2em;
+  background: #fff;
+  padding: 2em;
+  border-radius: 2em;
+  width: 56.5em;
+  height: 41em;
+  box-shadow: 0 1em 3em rgba(0, 0, 0, 0.15);
+}
+
+/* Left side */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+h1 {
+  font-size: 3.3em;
+  margin: 0;
+  color: #222;
+  font-weight: 700;
+}
+
+.subtext {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+  padding-block: 0.5em;
+}
+
+/* Bullet list */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.benefits li {
+  position: relative;
+  padding-left: 1.5em;
+  color: #333;
+  padding-left: 2.5em;
+  line-height: 1.5;
+}
+
+.benefits li::before {
+  content: url("./assets/images/icon-list.svg");
+  position: absolute;
+  left: 0;
+  color: #e63946;
+}
+
+/* Form */
+.email-label {
+  font-size: 0.8em;
+  font-weight: 600;
+  position: relative;
+  bottom: -1.2em;
+  right: -0.2em;
+  color: #333;
+}
+
+.email-input {
+  padding: 1em 1.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.cta {
+  margin-top: 0.5em;
+  padding: 1em;
+  background: #242742;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Right side (image) */
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .right img {
+  width: 100%;
+  border-radius: 1.5em;      
+  object-fit: cover;
+} */
+
+.thanksMsg {
+  display: none;
+}
+
+#mobileImg {
+  display: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 48em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .newsletter-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "top"
+    "bottom";
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    gap: 0;
+    align-items: center;
+    
+  }
+
+  #desktopImg {
+    display: none;
+  }
+
+  #mobileImg {
+    display: flex;
+    width: 100%;
+  }
+
+  .right{
+    grid-area: top;
+  }
+
+
+  .left {
+    margin: 1.5em;
+    grid-area: bottom;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+  
+
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
