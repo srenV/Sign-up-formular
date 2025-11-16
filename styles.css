@@ -1,158 +1,164 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
 body {
-    box-sizing: border-box;
-    margin: 0;
-    overflow: hidden;
+  margin: 0;
+  overflow: hidden;
 }
 
-main {
-}
-
-h1{
-    font-size: 2.5em;
-    color: hsl(234, 29%, 20%);
-    margin-bottom: 0;
+h1 {
+  font-size: 2.5em;
+  color: hsl(234, 29%, 20%);
+  margin: 0;
 }
 
 p {
-    margin: 0;
-}
-ul{
-    padding: 0;
-}
-li{
-    list-style: none;
-    margin-bottom: 1em;
+  margin: 0;
 }
 
-ul li{
-    display: flex;
-    align-items: start;
-    gap: 1em;
-    
+ul {
+  padding: 0;
 }
 
-li img{
-    width: 1.5em;
-    height: auto;
+li {
+  list-style: none;
+  margin-bottom: 1em;
 }
 
+ul li {
+  display: flex;
+  align-items: start;
+  gap: 1em;
+}
 
-
+li img {
+  width: 1.5em;
+  height: auto;
+}
 
 .signUpForm {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.upperRight{
-    flex: 1;
-}
-.lowerLeft{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    margin-inline: 1.2em;
-    gap: 1em;
+.upperRight {
+  flex: 1;
 }
 
-#mobileImg{
-    width: 100%;
-    height: auto;
+.lowerLeft {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 1.2em;
+  gap: 1em;
 }
 
-#desktopImg{
-    display: none;
+#mobileImg {
+  width: 100%;
+  height: auto;
+}
+
+#desktopImg {
+  display: none;
 }
 
 .email {
-    border-radius: .6em;
-    padding: 1.2em;
-    width: 100%;
-    font-weight: 700;
-    font-size: 1em;
-    border-color: hsla(0, 0%, 58%, 0.373);
-    outline: none;
-    transition: .6s ease;
+  border-radius: 0.6em;
+  padding: 1.2em;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1em;
+  border: 1px solid hsla(0, 0%, 58%, 0.373);
+  outline: none;
+  transition: 0.6s ease;
 }
 
-.email:focus{
-    border-color: hsl(4, 100%, 67%);
-    color: hsl(4, 100%, 67%);
-    
+.email:focus {
+  border-color: hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background-color: rgba(128, 128, 128, 0.1);
 }
 
-.email:hover{
-    border-color: hsl(4, 100%, 67%);
+.email:hover {
+  border-color: hsl(4, 100%, 67%);
 }
 
-.email::placeholder{
-    color: hsl(0, 0%,58%);
+.email::placeholder {
+  color: hsl(0, 0%, 58%);
+  transition: all 1s ease-in-out;
 }
 
+.email:hover::placeholder {
+  transform: translateX(5em);
+}
 
-label{
-    font-size: .9em;
-    font-weight: 600;
-    transform: translateY(1em);
+.email:focus::placeholder{
+  transform: translateX(30em);
+}
+
+label {
+  font-size: 0.9em;
+  font-weight: 600;
+  transform: translateY(1em);
 }
 
 .lowerBtn {
-    background-color: hsl(234, 29%, 20%);
-    color: hsl(0, 0%, 100%);
-    border-radius: .6em;
-    border: none;
-    padding: 1.2em;
-    width: 100%;
-    font-weight: 700;
-    font-size: 1em;
-    transition: .6s ease;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.6em;
+  border: none;
+  padding: 1.2em;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 0.6s ease;
 }
 
-.lowerBtn:hover{
-    background-color: hsl(4, 100%, 67%);
-    color: hsl(234, 29%, 20%);
+.lowerBtn:hover {
+  background-color: hsl(4, 100%, 67%);
+  color: hsl(234, 29%, 20%);
 }
 
-.lowerBtn:active{
-    background-color: hsl(4, 100%, 67%);
+.lowerBtn:active {
+  background-color: hsl(4, 100%, 67%);
 }
-/* ------------------------------------------------------------------------------------------------------------------------------------------ */
 
-/* This section appears when the user submits a valit mail adress by setting the display fromm successMsg to flex and from signUpForm to none */
+.hideSpan{
+  visibility: hidden;
+}
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+.emailSpan{
+  visibility: hidden;
+}
 
+/* Success message */
 .successMsg {
   display: none;
   flex-direction: column;
-  justify-items: center;
   height: 100dvh;
   padding: 1.5em;
-
-}
-.successUpper{
-    margin-top: 10em;
-    flex: 8;
 }
 
-.successUpper h1{
-    margin-block: 1em;
+.successUpper {
+  margin-top: 10em;
+  flex: 8;
+}
+
+.successUpper h1 {
+  margin-block: 1em;
 }
 
 .successUpper span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-.successLower{
-    flex: 1;
+.successLower {
+  flex: 1;
 }
 
 footer {
@@ -166,4 +172,79 @@ footer {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Desktop layout */ 
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@media (min-width: 600px) {
+  .signUpForm {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 1em;
+    width: 56.5em;
+    height: 40em;
+  }
+
+  main {
+    background-color: white;
+    border-radius: 2em;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .lowerLeft {
+    margin: 3em;
+    padding-block: 2em;
+  }
+
+  #mobileImg {
+    display: none;
+  }
+
+  #desktopImg {
+    display: block;
+    min-width: 100%;
+    height: auto;
+    padding: 1.5em;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+  }
+
+  .successMsg{
+    display: none;
+    background-color: white;
+    height:30em;
+    width: 30em;
+    border-radius: 2em;
+    justify-content: center;
+    padding: 3em;
+    gap: 3em;
+  }
+
+  .successMsg .successUpper {
+   margin-top: 0;
+   padding: 0;
+  }
+
+
+  .successUpper h1{
+    margin-top: 0;
+    line-height: .9;
+    transform: translateY(.5em);
+  }
+
+
+  
 }

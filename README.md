@@ -3,15 +3,18 @@
 This is my solution to the sign-up form challenge on Frontend Mentor.
 ## Overview
 
-A simple, responsive layout showcasing an Article Preview Component. The goal is to practice alignment, a bit of JavaScript, and basic responsive design using HTML and CSS.
+A simple, responsive layout showcasing an Article Preview Component. The goal is to practice alignment, a bit of JavaScript, form validation, and basic responsive design using HTML and CSS.
+
 ## Built with
 
     HTML5
     CSS3
     JavaScript
-    Flexbox / Grid
+    Flexbox
 
 ## Time to Build
+
+ ~ 6 hours
 
 ## Author
 

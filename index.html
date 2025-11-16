@@ -38,7 +38,8 @@
             much more!
           </li>
         </ul>
-        <label for="email" class="emailSpan">Email address</label>
+        <!-- had to improvise here with the span 😂 -->
+        <label for="email" >Email address <span class="hideSpan">xxxxxxxxxxxxxxxxxx</span><span class="emailSpan">Valid email required</span></label>
         <input type="email" name="email" id="email" class="email" placeholder="email@company.com" required />
         <input type="submit" name="submit" id="submit" class="lowerBtn" value="Subscribe to monthly newsletter" />
       </div>
@@ -50,7 +51,7 @@
         <h1>Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <span>ash@loremcompany.com</span>. Please open it and click the
+          <span class="successMail">ash@loremcompany.com</span>. Please open it and click the
           button inside to confirm your subscription.
         </p>
       </div>
@@ -60,11 +61,6 @@
     </div>
   </main>
   <footer>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-        href="#">Your Name Here</a>.
-    </div>
   </footer>
 </body>
 
