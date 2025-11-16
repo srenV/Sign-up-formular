@@ -42,6 +42,7 @@ dismissBtn.addEventListener('click', function () {
     successMsg.style.display = 'none';
     signUpForm.style.display = 'flex';
     emailSpan.style.visibility = "hidden"
+    emailInput.style.backgroundColor = "white"
     emailInput.value = '';
 });
 
