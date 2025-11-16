@@ -1,197 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+}
+
+h1{
+    font-size: 2.5em;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+ul li{
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    
+}
+
+li img{
+    width: 1.5em;
+    height: auto;
+}
+
+
+
+
+.signUpForm {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.upperRight{
+    flex: 1;
+}
+.lowerLeft{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1.2em;
+    gap: 1em;
+}
+
+#mobileImg{
+    width: 100%;
+    height: auto;
+}
+
+#desktopImg{
+    display: none;
+}
+
+.email {
+    border-radius: .6em;
+    padding: 1.2em;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1em;
+    border-color: hsla(0, 0%, 58%, 0.373);
+    outline: none;
+    transition: .6s ease;
+}
+
+.email:focus{
+    border-color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+    
+}
+
+.email:hover{
+    border-color: hsl(4, 100%, 67%);
+}
+
+.email::placeholder{
+    color: hsl(0, 0%,58%);
+}
+
+
+label{
+    font-size: .9em;
+    font-weight: 600;
+    transform: translateY(1em);
+}
+
+.lowerBtn {
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    border-radius: .6em;
+    border: none;
+    padding: 1.2em;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1em;
+    transition: .6s ease;
+}
+
+.lowerBtn:hover{
+    background-color: hsl(4, 100%, 67%);
+    color: hsl(234, 29%, 20%);
+}
+
+.lowerBtn:active{
+    background-color: hsl(4, 100%, 67%);
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* This section appears when the user submits a valit mail adress by setting the display fromm successMsg to flex and from signUpForm to none */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.successMsg {
+  display: none;
+  flex-direction: column;
+  justify-items: center;
+  height: 100dvh;
+  padding: 1.5em;
+
+}
+.successUpper{
+    margin-top: 10em;
+    flex: 8;
+}
+
+.successUpper h1{
+    margin-block: 1em;
+}
+
+.successUpper span {
+    font-weight: 700;
+}
+
+.successLower{
+    flex: 1;
+}
+
+footer {
+  display: none;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  background: #2d2f48;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  justify-items: center;
-  align-items: center;
-  height: 100dvh;
-  margin: 0;
-}
-
-footer {
-  position: relative;
-  top: -1em;
-}
-
-/* Main Frame */
-.newsletter-card {
-  display: flex;
-  gap: 2em;
-  background: #fff;
-  padding: 2em;
-  border-radius: 2em;
-  width: 56.5em;
-  height: 41em;
-  box-shadow: 0 1em 3em rgba(0, 0, 0, 0.15);
-}
-
-/* Left side */
-.left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.5em;
-}
-
-h1 {
-  font-size: 3.3em;
-  margin: 0;
-  color: #222;
-  font-weight: 700;
-}
-
-.subtext {
-  font-size: 1em;
-  color: #555;
-  margin: 0;
-  padding-block: 0.5em;
-}
-
-/* Bullet list */
-.benefits {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
-.benefits li {
-  position: relative;
-  padding-left: 1.5em;
-  color: #333;
-  padding-left: 2.5em;
-  line-height: 1.5;
-}
-
-.benefits li::before {
-  content: url("./assets/images/icon-list.svg");
-  position: absolute;
-  left: 0;
-  color: #e63946;
-}
-
-/* Form */
-.email-label {
-  font-size: 0.8em;
-  font-weight: 600;
-  position: relative;
-  bottom: -1.2em;
-  right: -0.2em;
-  color: #333;
-}
-
-.email-input {
-  padding: 1em 1.5em;
-  font-size: 1em;
-  border-radius: 0.5em;
-  border: 1px solid #ccc;
-}
-
-.cta {
-  margin-top: 0.5em;
-  padding: 1em;
-  background: #242742;
-  color: #fff;
-  border: none;
-  border-radius: 0.5em;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Right side (image) */
-.right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* .right img {
-  width: 100%;
-  border-radius: 1.5em;      
-  object-fit: cover;
-} */
-
-.thanksMsg {
-  display: none;
-}
-
-#mobileImg {
-  display: none;
-}
-
-/* --- Responsive --- */
-@media (max-width: 48em) {
-  body {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .newsletter-card {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "top"
-    "bottom";
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    gap: 0;
-    align-items: center;
-    
-  }
-
-  #desktopImg {
-    display: none;
-  }
-
-  #mobileImg {
-    display: flex;
-    width: 100%;
-  }
-
-  .right{
-    grid-area: top;
-  }
-
-
-  .left {
-    margin: 1.5em;
-    grid-area: bottom;
-  }
-
-  h1 {
-    font-size: 2.4em;
-  }
-  
-
-  header {
-    display: none;
-  }
-
-  footer {
-    display: none;
-  }
 }
