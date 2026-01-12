@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
 }
 
 body {
@@ -161,8 +160,9 @@ label {
   flex: 1;
 }
 
-footer {
-  display: none;
+footer{
+  position: absolute;
+  bottom: 1rem;
 }
 
 .attribution {
